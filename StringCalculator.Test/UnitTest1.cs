@@ -42,7 +42,7 @@ namespace StringCalculator.Test
         [InlineData(3, "3")]
         [InlineData(4, "4")]
 
-        public void ReturnNumberGivenNumber(int expected, string input)
+        public void ReturnNumberGivenNumberString(int expected, string input)
         {
             int result = Calculator.Add(input);
 
@@ -56,7 +56,7 @@ namespace StringCalculator.Test
         [InlineData(2, "1,1")]
         [InlineData(3, "1,2")]
 
-        public void ReturnSumGiveTwoNumbers(int expected, string input)
+        public void ReturnSumGivenTwoNumbers(int expected, string input)
         {
             int result = Calculator.Add(input);
 
