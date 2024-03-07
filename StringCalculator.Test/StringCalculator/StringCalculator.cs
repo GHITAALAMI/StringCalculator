@@ -8,8 +8,10 @@
             {
                 return 1;
             }
-            else
+            else if (numbers == "2")
             {
+                return 2;
+            } else {
                 return 0;
             }
         }
