@@ -54,7 +54,7 @@ namespace StringCalculator.Test
 
         [Theory]
         [InlineData(2, "1,1")]
-        [InlineData(3, "1,2")]
+        [InlineData(6, "1,2,3")]
 
         public void ReturnSumGivenTwoNumbers(int expected, string input)
         {
@@ -64,5 +64,16 @@ namespace StringCalculator.Test
         }
 
 
+        [Theory]
+        [InlineData(7, "1,1,5")]
+        [InlineData(9, "1,2,3,3")]
+        [InlineData(22, "11,10,1")]
+
+        public void ReturnSumGivenMultiplenumbers(int expected, string input)
+        {
+            int result = Calculator.Add(input);
+
+            Assert.Equal(expected, result);
+        }
     }
 }
