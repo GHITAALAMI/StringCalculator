@@ -50,5 +50,18 @@ namespace StringCalculator.Test
         }
 
 
+        [Fact]
+
+        public void OnePlusOneEqualsTwo()
+        {
+            int result = Calculator.Add("1,1");
+
+            var expected = 2;
+
+            Assert.Equal(expected, result);
+        }
+
+
+
     }
 }
