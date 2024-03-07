@@ -34,5 +34,21 @@ namespace StringCalculator.Test
 
             Assert.Equal(expected, result);
         }
+
+
+        [Theory]
+        [InlineData(1, "1")]
+        [InlineData(2, "2")]
+        [InlineData(3, "3")]
+        [InlineData(4, "4")]
+
+        public void ReturnNumberGivenNummber(int expected, string input)
+        {
+            int result = Calculator.Add(input);
+
+            Assert.Equal(expected, result);
+        }
+
+
     }
 }
