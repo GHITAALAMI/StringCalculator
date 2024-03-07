@@ -4,11 +4,16 @@
     {
         public static int Add(string numbers)
         {
-            if (int.TryParse(numbers, out int number))
+            string[] strings = numbers.Split(',');
+            int sum = 0;
+            foreach (var s in strings)
             {
-                return number;
+                if (int.TryParse(s, out int number))
+                {
+                    sum += number;
+                }
             }
-            return 0;
-        }
+            return sum;
+    }
     }
 }
