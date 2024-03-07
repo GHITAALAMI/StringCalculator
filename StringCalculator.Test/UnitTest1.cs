@@ -1,11 +1,17 @@
+using System.Security.Cryptography.X509Certificates;
+using StringCalculator;
 namespace StringCalculator.Test
 {
-    public class UnitTest1
+    public class StringCalculatorShouldAdd
     {
         [Fact]
-        public void Test1()
+        public void ReturnZeroGivenEmptyString()
         {
+            int result = StringCalculator.Add("0");
 
+            int expected = 0;
+
+            Assert.Equal(expected, result);
         }
     }
 }
