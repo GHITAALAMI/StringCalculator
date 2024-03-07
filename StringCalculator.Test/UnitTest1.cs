@@ -50,17 +50,18 @@ namespace StringCalculator.Test
         }
 
 
-        [Fact]
 
-        public void OnePlusOneEqualsTwo()
+
+        [Theory]
+        [InlineData(2, "1,1")]
+        [InlineData(3, "1,2")]
+
+        public void ReturnSumGiveTwoNumbers(int expected, string input)
         {
-            int result = Calculator.Add("1,1");
-
-            var expected = 2;
+            int result = Calculator.Add(input);
 
             Assert.Equal(expected, result);
         }
-
 
 
     }
