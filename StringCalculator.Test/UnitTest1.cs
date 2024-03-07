@@ -76,8 +76,8 @@ namespace StringCalculator.Test
             Assert.Equal(expected, result);
         }
         [Theory]
-        [InlineData(7, "1\n,1,5")]
-        [InlineData(9, "1,2,3\n,3")]
+        [InlineData(7, "1\n1,5")]
+        [InlineData(9, "1,2\n3\n3")]
 
         public void ReturnSumGivenMultiplenumbersAndSpaces(int expected, string input)
         {
@@ -86,5 +86,16 @@ namespace StringCalculator.Test
             Assert.Equal(expected, result);
         }
 
+
+        [Theory]
+        [InlineData(0, "//;\n1;2")]
+        [InlineData(9, "1,2\n3\n3")]
+
+        public void ReturnSumGivenCustomDelimitedNumbers(int expected, string input)
+        {
+            int result = Calculator.Add(input);
+
+            Assert.Equal(expected, result);
+        }
     }
 }
