@@ -13,5 +13,15 @@ namespace StringCalculator.Test
 
             Assert.Equal(expected, result);
         }
+
+        [Fact]
+        public void ReturnOneGivenOne()
+        {
+            int result = Calculator.Add("1");
+
+            int expected = 1;
+
+            Assert.Equal(expected, result);
+        }
     }
 }
