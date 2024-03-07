@@ -25,31 +25,21 @@ namespace StringCalculator
     }
         private static void CheckForNegativeNumbers(List<int> numberlist)
         {
-            var negativenumbrs = numberlist.Where(X => X < 0).ToList();
-            if (negativenumbrs.Any())
+            var negativenumbers = numberlist.Where(X => X < 0).ToList();
+            if (negativenumbers.Any())
             {
-                throw new NegativesNotAllowedException();
+                throw new NegativesNotAllowedException(negativenumbers);
             }
         }
     }
 
-    [Serializable]
-    internal class NegativesNotAllowedException : Exception
+    public class NegativesNotAllowedException : Exception
     {
-        public NegativesNotAllowedException()
+        public NegativesNotAllowedException(IEnumerable<int> negativenumbers)
+            : base($"negatives not allowed : {string.Join(',', negativenumbers)}")
         {
+            
         }
 
-        public NegativesNotAllowedException(string? message) : base(message)
-        {
-        }
-
-        public NegativesNotAllowedException(string? message, Exception? innerException) : base(message, innerException)
-        {
-        }
-
-        protected NegativesNotAllowedException(SerializationInfo info, StreamingContext context) : base(info, context)
-        {
-        }
     }
 }
