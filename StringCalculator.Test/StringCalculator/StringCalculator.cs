@@ -4,8 +4,14 @@
     {
         public static int Add(string numbers)
         {
-            return 0;
-            
+            if (numbers == "1")
+            {
+                return 1;
+            }
+            else
+            {
+                return 0;
+            }
         }
     }
 }
