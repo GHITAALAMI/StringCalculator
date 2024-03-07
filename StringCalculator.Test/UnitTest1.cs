@@ -42,7 +42,7 @@ namespace StringCalculator.Test
         [InlineData(3, "3")]
         [InlineData(4, "4")]
 
-        public void ReturnNumberGivenNummber(int expected, string input)
+        public void ReturnNumberGivenNumber(int expected, string input)
         {
             int result = Calculator.Add(input);
 
