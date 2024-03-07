@@ -1,10 +1,11 @@
 ﻿namespace StringCalculator
 {
-    internal class StringCalculator
+    public class Calculator
     {
-        public int Add(string numbers)
+        public static int Add(string numbers)
         {
-            return 13;
+            return 0;
+            
         }
     }
 }

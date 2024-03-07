@@ -7,7 +7,7 @@ namespace StringCalculator.Test
         [Fact]
         public void ReturnZeroGivenEmptyString()
         {
-            int result = StringCalculator.Add("0");
+            int result = Calculator.Add("0");
 
             int expected = 0;
 
