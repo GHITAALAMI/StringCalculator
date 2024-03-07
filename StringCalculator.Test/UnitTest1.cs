@@ -101,9 +101,11 @@ namespace StringCalculator.Test
         [Fact]
         public void ThrowExceptionGivenNegativeNumber()
         {
-            void testcode() => Calculator.Add("-1");
+            void testcode() => Calculator.Add("-1,-4,7");
             var exception = Assert.Throws<NegativesNotAllowedException>((Action) (testcode));
             Assert.Contains("-1", exception.Message);
+            Assert.Contains("-4", exception.Message);
+            Assert.DoesNotContain("7", exception.Message);
         }
     }
 }
