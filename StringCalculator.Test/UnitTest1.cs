@@ -23,5 +23,16 @@ namespace StringCalculator.Test
 
             Assert.Equal(expected, result);
         }
+
+
+        [Fact]
+        public void ReturnTwoGivenTwo()
+        {
+            int result = Calculator.Add("2");
+
+            int expected = 2;
+
+            Assert.Equal(expected, result);
+        }
     }
 }
