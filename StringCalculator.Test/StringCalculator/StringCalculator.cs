@@ -4,16 +4,11 @@
     {
         public static int Add(string numbers)
         {
-            if (numbers == "1")
+            if (int.TryParse(numbers, out int number))
             {
-                return 1;
+                return number;
             }
-            else if (numbers == "2")
-            {
-                return 2;
-            } else {
-                return 0;
-            }
+            return 0;
         }
     }
 }
